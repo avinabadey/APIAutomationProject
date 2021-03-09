@@ -1,0 +1,245 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-07T14:16:17.387Z",
+        "line": 14,
+        "name": "Verify that Place is successfully added using Add Place API",
+        "description": "",
+        "id": "validating-the-place-api-s;verify-that-place-is-successfully-added-using-add-place-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NoClassDefFoundError: Could not initialize class org.codehaus.groovy.reflection.ReflectionCache\r\n\tat org.codehaus.groovy.runtime.dgmimpl.NumberNumberMetaMethod.\u003cclinit\u003e(NumberNumberMetaMethod.java:33)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.createMetaMethodFromClass(MetaClassRegistryImpl.java:258)\r\n\tat org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.\u003cinit\u003e(MetaClassRegistryImpl.java:111)\r\n\tat org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.\u003cinit\u003e(MetaClassRegistryImpl.java:86)\r\n\tat groovy.lang.GroovySystem.\u003cclinit\u003e(GroovySystem.java:36)\r\n\tat org.codehaus.groovy.runtime.InvokerHelper.\u003cclinit\u003e(InvokerHelper.java:86)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.createMap(ScriptBytecodeAdapter.java:635)\r\n\tat io.restassured.internal.ResponseParserRegistrar.\u003cinit\u003e(ResponseParserRegistrar.groovy)\r\n\tat io.restassured.RestAssured.\u003cclinit\u003e(RestAssured.java:346)\r\n\tat io.restassured.builder.RequestSpecBuilder.\u003cinit\u003e(RequestSpecBuilder.java:78)\r\n\tat BDD.APITestFramework.utilities.RequestSpec.getRequestSpec(RequestSpec.java:24)\r\n\tat BDD.APITestFramework.steps.AddPlaceSteps.createRequestSpecification(AddPlaceSteps.java:47)\r\n\tat BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.add_place_payload(AddPlaceStepDefinition.java:24)\r\n\tat ✽.Add Place Payload with \"Juan\", \"Spanish\" and \"Spain\"(file:///C:/Users/avina/OneDrive/Projects/RestAssuredWorkspace/APITestFramework/src/test/java/BDD/APITestFramework/features/add_place_validations.feature:5)\r\n",
+              "duration": 131542500,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "Add Place Payload with \"Juan\", \"Spanish\" and \"Spain\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Juan\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"Spanish\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"Spain\"",
+                  "offset": 45
+                }
+              ],
+              "location": "BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.add_place_payload(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "User call \"ADD_PLACE_RESOURCE\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ADD_PLACE_RESOURCE\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 36
+                }
+              ],
+              "location": "BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.user_call_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.api_call_got_success_with_status_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "Verify \"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 36
+                }
+              ],
+              "location": "BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.verify_in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "Verify \"scope\" in response body is \"APP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"scope\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"APP\"",
+                  "offset": 35
+                }
+              ],
+              "location": "BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.verify_in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "Verify place_id matches \"Juan\" using \"GET_PLACE_RESOURCE\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Juan\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"GET_PLACE_RESOURCE\"",
+                  "offset": 37
+                }
+              ],
+              "location": "BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.verify_place_id_matches(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@addPlace"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-07T14:16:17.708Z",
+        "line": 18,
+        "name": "Verify that Delete Place functionality is working",
+        "description": "",
+        "id": "validating-the-place-api-s;verify-that-delete-place-functionality-is-working",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"io.restassured.response.Response.asString()\" because \"res\" is null\r\n\tat BDD.APITestFramework.utilities.ResponseToJSON.convertResponseToJSON(ResponseToJSON.java:9)\r\n\tat BDD.APITestFramework.steps.AddPlaceSteps.getResponseValueByFieldname(AddPlaceSteps.java:149)\r\n\tat BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.delete_place_payload(AddPlaceStepDefinition.java:66)\r\n\tat ✽.Delete Place Payload(file:///C:/Users/avina/OneDrive/Projects/RestAssuredWorkspace/APITestFramework/src/test/java/BDD/APITestFramework/features/add_place_validations.feature:19)\r\n",
+              "duration": 6419900,
+              "status": "failed"
+            },
+            "line": 19,
+            "name": "Delete Place Payload",
+            "match": {
+              "location": "BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.delete_place_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 20,
+            "name": "User call \"DELETE_PLACE_RESOURCE\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DELETE_PLACE_RESOURCE\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 39
+                }
+              ],
+              "location": "BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.user_call_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 21,
+            "name": "API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.api_call_got_success_with_status_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 22,
+            "name": "Verify \"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 36
+                }
+              ],
+              "location": "BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.verify_in_response_body_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@deletePlace"
+          }
+        ]
+      }
+    ],
+    "name": "Validating the Place API\u0027s",
+    "description": "",
+    "id": "validating-the-place-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/BDD/APITestFramework/features/add_place_validations.feature",
+    "tags": []
+  }
+]

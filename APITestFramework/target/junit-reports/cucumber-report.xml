@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.784">
+    <testcase classname="Validating the Place API's" name="Verify that Place is successfully added using Add Place API" time="0.285">
+        <failure message="Could not initialize class org.codehaus.groovy.reflection.ReflectionCache" type="java.lang.NoClassDefFoundError"><![CDATA[Given Add Place Payload with "Juan", "Spanish" and "Spain"..................failed
+When User call "ADD_PLACE_RESOURCE" with "POST" http request................skipped
+Then API call got success with status code 200..............................skipped
+And Verify "status" in response body is "OK"................................skipped
+And Verify "scope" in response body is "APP"................................skipped
+And Verify place_id matches "Juan" using "GET_PLACE_RESOURCE"...............skipped
+
+StackTrace:
+java.lang.NoClassDefFoundError: Could not initialize class org.codehaus.groovy.reflection.ReflectionCache
+	at org.codehaus.groovy.runtime.dgmimpl.NumberNumberMetaMethod.<clinit>(NumberNumberMetaMethod.java:33)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.createMetaMethodFromClass(MetaClassRegistryImpl.java:258)
+	at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.<init>(MetaClassRegistryImpl.java:111)
+	at org.codehaus.groovy.runtime.metaclass.MetaClassRegistryImpl.<init>(MetaClassRegistryImpl.java:86)
+	at groovy.lang.GroovySystem.<clinit>(GroovySystem.java:36)
+	at org.codehaus.groovy.runtime.InvokerHelper.<clinit>(InvokerHelper.java:86)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.createMap(ScriptBytecodeAdapter.java:635)
+	at io.restassured.internal.ResponseParserRegistrar.<init>(ResponseParserRegistrar.groovy)
+	at io.restassured.RestAssured.<clinit>(RestAssured.java:346)
+	at io.restassured.builder.RequestSpecBuilder.<init>(RequestSpecBuilder.java:78)
+	at BDD.APITestFramework.utilities.RequestSpec.getRequestSpec(RequestSpec.java:24)
+	at BDD.APITestFramework.steps.AddPlaceSteps.createRequestSpecification(AddPlaceSteps.java:47)
+	at BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.add_place_payload(AddPlaceStepDefinition.java:24)
+	at ✽.Add Place Payload with "Juan", "Spanish" and "Spain"(file:///C:/Users/avina/OneDrive/Projects/RestAssuredWorkspace/APITestFramework/src/test/java/BDD/APITestFramework/features/add_place_validations.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="Validating the Place API's" name="Verify that Delete Place functionality is working" time="0.01">
+        <failure message="Cannot invoke &quot;io.restassured.response.Response.asString()&quot; because &quot;res&quot; is null" type="java.lang.NullPointerException"><![CDATA[Given Delete Place Payload..................................................failed
+When User call "DELETE_PLACE_RESOURCE" with "POST" http request.............skipped
+Then API call got success with status code 200..............................skipped
+And Verify "status" in response body is "OK"................................skipped
+
+StackTrace:
+java.lang.NullPointerException: Cannot invoke "io.restassured.response.Response.asString()" because "res" is null
+	at BDD.APITestFramework.utilities.ResponseToJSON.convertResponseToJSON(ResponseToJSON.java:9)
+	at BDD.APITestFramework.steps.AddPlaceSteps.getResponseValueByFieldname(AddPlaceSteps.java:149)
+	at BDD.APITestFramework.stepDefinitions.AddPlaceStepDefinition.delete_place_payload(AddPlaceStepDefinition.java:66)
+	at ✽.Delete Place Payload(file:///C:/Users/avina/OneDrive/Projects/RestAssuredWorkspace/APITestFramework/src/test/java/BDD/APITestFramework/features/add_place_validations.feature:19)
+]]></failure>
+    </testcase>
+</testsuite>

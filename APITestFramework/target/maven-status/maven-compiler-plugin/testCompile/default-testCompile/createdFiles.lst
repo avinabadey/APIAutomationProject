@@ -1,0 +1,16 @@
+BDD\APITestFramework\RunnerSuite\TestRunner.class
+BDD\APITestFramework\utilities\APIResources.class
+BDD\APITestFramework\POJO\AddPlace\Location.class
+BDD\APITestFramework\POJO\AddPlace\AddPlaceBody.class
+BDD\APITestFramework\POJO\Courses\Courses.class
+BDD\APITestFramework\stepDefinitions\AddPlaceStepDefinition.class
+BDD\APITestFramework\POJO\Courses\Mobile.class
+BDD\APITestFramework\utilities\Payload.class
+BDD\APITestFramework\utilities\Payload_old.class
+BDD\APITestFramework\POJO\Courses\API.class
+BDD\APITestFramework\utilities\ResponseSpec.class
+BDD\APITestFramework\steps\AddPlaceSteps.class
+BDD\APITestFramework\utilities\RequestSpec.class
+BDD\APITestFramework\utilities\ResponseToJSON.class
+BDD\APITestFramework\POJO\Courses\WebAutomation.class
+BDD\APITestFramework\POJO\Courses\CoursesResponse.class
